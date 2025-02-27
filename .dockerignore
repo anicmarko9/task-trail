@@ -1,0 +1,54 @@
+# Directories
+node_modules
+.cache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Version Control
+.git
+.gitignore
+
+# Output and Distribution
+out
+dist
+
+# Documentation
+README.md
+LICENSE
+
+# IDE-specific
+.vscode
+
+# Next.js
+.next
+
+# Environment
+.env.local
+*.env
+
+# Temporary Files
+*.swp
+
+# Scripts
+/scripts
+
+# Build Artifacts
+build
+
+# Code Coverage
+coverage
+
+# macOS System File
+.DS_Store
+
+# Security
+*.pem
