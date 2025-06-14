@@ -1,5 +1,5 @@
 # Builder
-FROM node:23.9-alpine AS builder
+FROM node:24.1-alpine AS builder
 
 WORKDIR /home/app
 
@@ -33,7 +33,7 @@ RUN if [ "$ENV" = "prd" ]; then \
   echo "Sitemap: $NEXT_PUBLIC_SITE_URL/sitemap.xml" >> public/robots.txt
 
 # Runner
-FROM node:23.9-alpine AS runner
+FROM node:24.1-alpine AS runner
 
 RUN apk --no-cache add openssh-server && \
   echo "root:Docker!" | chpasswd && \
