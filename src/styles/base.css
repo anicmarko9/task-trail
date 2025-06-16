@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./fonts/fonts.css";
+
+html,
+body {
+  @apply font-poppins bg-primary text-primary selection:bg-accent selection:text-nav m-0 flex min-h-screen flex-col p-0;
+}
+
+p {
+  @apply m-0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply m-0 font-semibold;
+}
+
+a {
+  @apply no-underline transition-colors duration-300 ease-in-out;
+}
+
+.colorTransition {
+  @apply transition-colors duration-300 ease-in-out;
+}

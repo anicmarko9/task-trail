@@ -1,7 +1,10 @@
+import Header from "@components/nav/Header";
+
 export default function Home() {
   return (
-    <main>
-      <p>Hello World</p>
-    </main>
+    <>
+      <Header />
+      <main className="w-full h-full"></main>
+    </>
   );
 }

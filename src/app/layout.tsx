@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
-  title: "Task Trail",
+  title: "TaskTrail",
   description: "Streamline Your Workflow, Accelerate Your Success",
 };
 
