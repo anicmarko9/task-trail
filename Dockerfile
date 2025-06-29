@@ -1,5 +1,4 @@
-# Builder
-FROM node:24.1-alpine AS builder
+FROM node:24.3-alpine AS builder
 
 WORKDIR /home/app
 
@@ -32,8 +31,7 @@ RUN if [ "$ENV" = "prd" ]; then \
   echo "Host: $NEXT_PUBLIC_SITE_URL" >> public/robots.txt && \
   echo "Sitemap: $NEXT_PUBLIC_SITE_URL/sitemap.xml" >> public/robots.txt
 
-# Runner
-FROM node:24.1-alpine AS runner
+FROM node:24.3-alpine AS runner
 
 RUN apk --no-cache add openssh-server && \
   echo "root:Docker!" | chpasswd && \
@@ -55,4 +53,4 @@ CMD ["./start.sh"]
 # --build-arg NEXT_PUBLIC_SITE_URL="http://localhost:3000" `
 # -t nextjs:15 --no-cache .
 
-# docker run -d -p 3000:3000 nextjs:15
+# docker run -d -p 3000:3000 -p 2222:2222 nextjs:15

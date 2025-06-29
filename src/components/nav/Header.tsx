@@ -3,72 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import Logo from "@images/logo/logo-header.svg";
-import Hamburger from "@images/icons/hamburger-icon.svg";
-
-interface SideNavLink {
-  name: string;
-  href: string;
-}
-
-const sideNavLinks: SideNavLink[] = [
-  { name: "Contact", href: "/contact" },
-  { name: "Privacy Policy", href: "/legal/privacy-policy" },
-  { name: "Terms of Service", href: "/legal/terms-of-service" },
-];
-
-const HomepageIcon = (): React.JSX.Element => (
-  <Link
-    href="/"
-    aria-label="Homepage"
-    className="p-1 cursor-pointer rounded-lg group flex items-center space-x-2"
-  >
-    <Logo
-      aria-hidden="true"
-      focusable="false"
-      className="text-nav group-hover:text-accent colorTransition"
-    />
-    <span className="hidden md:inline-block">
-      <TitleText id={"homepage-title-text-left"} />
-    </span>
-  </Link>
-);
-
-const TitleText = ({ id }: { id: string }): React.JSX.Element => (
-  <h1
-    id={id}
-    className={`text-center group ${id === "homepage-title-text-center" ? "md:hidden" : "inline-block"}`}
-    aria-label="TaskTrail branding and slogan"
-  >
-    <span className="text-xl tracking-wider font-bold relative block mb-[-6px] colorTransition group-hover:text-accent">
-      TaskTrail
-    </span>
-    <span className="block text-[8px] uppercase font-light text-accent tracking-wider mt-[-4px] colorTransition group-hover:text-nav">
-      Task it. Trail it. Crush it!
-    </span>
-  </h1>
-);
-
-const HomepageLinks = (): React.JSX.Element => (
-  <ul className="hidden md:flex items-center space-x-8">
-    {sideNavLinks.map(
-      (link: SideNavLink, index: number): React.JSX.Element => (
-        <li
-          key={index}
-          className="colorTransition font-light text-sm hover:underline hover:text-accent"
-        >
-          <Link href={link.href}>{link.name}</Link>
-        </li>
-      ),
-    )}
-    <li
-      key={"last-index"}
-      className="colorTransition font-light text-sm hover:text-accent pr-1"
-    >
-      <Link href="/dashboard">Dashboard</Link>
-    </li>
-  </ul>
-);
+import Hamburger from "@Images/icons/hamburger-icon.svg";
+import { SideNavLink, sideNavLinks } from "@Types/nav";
+import { TitleText, HomepageLinks } from "./elements/Static";
+import { HomepageIcon } from "./elements/Dynamic";
 
 interface HamburgerProps {
   id: string;
@@ -132,15 +70,15 @@ const Header = (): React.JSX.Element => {
 
   return (
     <>
-      <header className="w-screen h-12">
+      <header className="w-full h-12">
         <nav
           role="navigation"
           aria-label="Main navigation"
           className="flex items-center w-full h-full px-4 justify-between bg-nav text-nav"
         >
-          <HomepageIcon />
+          <HomepageIcon id={"homepage-title-text-left"} />
           <TitleText id={"homepage-title-text-center"} />
-          <HomepageLinks />
+          <HomepageLinks variant={"header"} />
           <HamburgerIcon
             id={"homepage_closed_menu"}
             onClick={toggleMenu}
