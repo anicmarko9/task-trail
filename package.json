@@ -8,9 +8,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node .next/standalone/server.js",
+    "start": "node standalone/server.js",
     "sitemap": "next-sitemap --config ./sitemap.config.mjs",
-    "postbuild": "next-sitemap --config ./sitemap.config.mjs",
+    "postbuild": "next-sitemap --config ./sitemap.config.mjs && cp -r .next/static .next/standalone/.next/static && cp -r public .next/standalone/public && mv .next/standalone . && rm -rf .next",
     "typecheck": "tsc",
     "format": "prettier --write \"src/**/*.{js,ts,jsx,tsx,json,css,md,mdx}\"",
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx,json,css,md,mdx}\" --quiet --no-cache",

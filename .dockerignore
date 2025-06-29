@@ -20,6 +20,7 @@ docker-compose*
 # Output and Distribution
 out
 dist
+standalone
 
 # Documentation
 README.md
@@ -52,3 +53,7 @@ coverage
 
 # Security
 *.pem
+
+# Sitemaps and Robots
+/public/robots.txt
+/public/sitemap.xml
