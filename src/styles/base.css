@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply m-0 font-semibold;
+  @apply m-0;
 }
 
 a {
@@ -32,4 +32,28 @@ a {
 
 .colorTransition {
   @apply transition-colors duration-300 ease-in-out;
+}
+
+.landingMain {
+  @apply flex w-full flex-1 flex-col items-center justify-start [gap:clamp(48px,4vw,192px)] [padding-inline:clamp(16px,4vw,64px)] [padding-block:clamp(48px,4vw,192px)] text-center;
+}
+
+.landingSection {
+  @apply flex w-full flex-col items-center justify-center [gap:clamp(16px,2vw,32px)];
+}
+
+.landingHeader {
+  @apply xxl:w-3/5 w-full [font-size:clamp(18px,4vw+2px,48px)] [line-height:clamp(22px,4.9vw+2px,58px)] font-black tracking-wider lg:w-4/5 xl:w-3/4;
+}
+
+.landingParagraph {
+  @apply xxl:w-3/5 w-full [font-size:clamp(10px,2.2vw,18px)] [line-height:clamp(16px,3vw,28px)] lg:w-4/5;
+}
+
+.buttonStyle {
+  @apply text-nav hover:text-accent bg-accent hover:bg-primary border-accent xxl:w-1/3 w-full cursor-pointer rounded-lg border-2 border-solid [padding:clamp(14px,1.5vw,22px)] [font-size:clamp(12px,2vw,18px)] [line-height:clamp(16px,2.8vw,24px)] font-bold tracking-wide lg:w-1/2;
+}
+
+.landingIllustration {
+  @apply text-accent hover:text-primary xs:w-[90%] xs:h-[90%] cursor-pointer sm:h-[85%] sm:w-[85%] md:h-[80%] md:w-[80%] lg:h-[75%] lg:w-[75%] xl:h-[70%] xl:w-[70%];
 }
