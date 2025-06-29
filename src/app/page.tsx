@@ -1,4 +1,4 @@
-import Header from "@components/nav/Header";
+import Header from "@Components/nav/Header";
 
 export default function Home() {
   return (

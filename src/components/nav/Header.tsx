@@ -3,19 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import Logo from "@images/logo/logo-header.svg";
-import Hamburger from "@images/icons/hamburger-icon.svg";
-
-interface SideNavLink {
-  name: string;
-  href: string;
-}
-
-const sideNavLinks: SideNavLink[] = [
-  { name: "Contact", href: "/contact" },
-  { name: "Privacy Policy", href: "/legal/privacy-policy" },
-  { name: "Terms of Service", href: "/legal/terms-of-service" },
-];
+import Logo from "@Images/logo/logo-header.svg";
+import Hamburger from "@Images/icons/hamburger-icon.svg";
+import { SideNavLink, sideNavLinks } from "@Types/nav";
 
 const HomepageIcon = (): React.JSX.Element => (
   <Link
