@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@config "../../tailwind.config.ts";
+@config "../../tailwind.config.mjs";
 
 @layer theme, base, components, utilities;
 
@@ -10,7 +10,7 @@
 
 html,
 body {
-  @apply font-poppins bg-primary text-primary selection:bg-accent selection:text-nav m-0 flex min-h-screen flex-col p-0;
+  @apply font-poppins bg-primary text-primary selection:bg-accent selection:text-nav m-0 flex min-h-screen min-w-screen flex-col p-0;
 }
 
 p {
