@@ -27,7 +27,7 @@ export const HomepageLinks = ({
     className={`${
       variant === "header"
         ? "hidden md:flex items-center text-sm font-light text-center space-x-8"
-        : "flex w-full items-center justify-between md:justify-evenly text-xs sm:text-sm font-light text-center space-x-8"
+        : "flex w-full items-center justify-between md:justify-evenly text-xs sm:text-sm font-light text-center space-x-4"
     }`}
   >
     {sideNavLinks.map(
