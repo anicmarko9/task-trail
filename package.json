@@ -3,8 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=24"
+    "node": ">=24",
+    "npm": ">=11"
   },
+  "browserslist": [
+    "chrome >0, last 2.5 years",
+    "edge >0, last 2.5 years",
+    "safari >0, last 2.5 years",
+    "firefox >0, last 2.5 years",
+    "and_chr >0, last 2.5 years",
+    "and_ff >0, last 2.5 years",
+    "ios >0, last 2.5 years",
+    "not dead"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -41,6 +52,7 @@
     "eslint": "^9.30.0",
     "eslint-config-next": "^15.3.4",
     "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.1",
@@ -48,9 +60,11 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-plugin-validate-jsx-nesting": "^0.1.1",
+    "husky": "^9.1.6",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.5.6",
     "postcss-load-config": "^6.0.1",
+    "postcss-loader": "^8.1.1",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "tailwindcss": "^4.1.11",
