@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionHero = (): React.JSX.Element => (
+const Hero = (): React.JSX.Element => (
   <section className="landingSection" aria-labelledby="landing-main-heading">
     <h1 id="landing-main-heading" className="landingHeader">
       Streamline Your Workflow, Accelerate Your Success
@@ -17,4 +17,4 @@ const SectionHero = (): React.JSX.Element => (
   </section>
 );
 
-export default SectionHero;
+export default Hero;

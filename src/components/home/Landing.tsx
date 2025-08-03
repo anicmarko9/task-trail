@@ -2,14 +2,16 @@
 
 import React from "react";
 
-import SectionHero from "./elements/Static";
-import SectionContent from "./elements/Dynamic";
+import Hero from "./elements/Hero";
+import WhyChoose from "./elements/WhyChoose";
+import Testimonials from "./elements/Testimonials";
 
 const Landing = (): React.JSX.Element => {
   return (
     <main role="main" className="landingMain">
-      <SectionHero />
-      <SectionContent />
+      <Hero />
+      <WhyChoose />
+      <Testimonials />
     </main>
   );
 };
