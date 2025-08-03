@@ -33,13 +33,10 @@ const HomepageIllustration = ({ id }: { id: string }): React.JSX.Element =>
 
 const HomepageIllustrationList = (): React.JSX.Element => {
   return (
-    <ul className="w-full flex items-start justify-between font-normal [font-size:clamp(10px,2.2vw,18px)] [line-height:clamp(14px,2.6vw,24px)] [gap:clamp(16px,4vw,64px)] tracking-wide">
+    <ul className="homepageIllustrationList">
       {illustrationItems.map(
         ({ id, text }: IllustrationItem, index: number): React.JSX.Element => (
-          <li
-            key={index}
-            className="flex flex-col flex-1 items-center justify-center [gap:clamp(12px,3vw,24px)]"
-          >
+          <li key={index} className="homepageIllustration">
             <HomepageIllustration id={id} />
             <strong>{text}</strong>
           </li>
@@ -49,17 +46,17 @@ const HomepageIllustrationList = (): React.JSX.Element => {
   );
 };
 
-const SectionContent = (): React.JSX.Element => (
+const WhyChoose = (): React.JSX.Element => (
   <section
     className="landingSection"
     aria-labelledby="landing-features-heading"
   >
     <h2 id="landing-features-heading" className="landingHeader">
-      Why choose <span className="text-accent">TaskTrail</span>?
+      Why Choose <span className="text-accent">TaskTrail</span>?
     </h2>
 
     <HomepageIllustrationList />
   </section>
 );
 
-export default SectionContent;
+export default WhyChoose;
